@@ -1,93 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO -->
-    <meta name="description" content="Página introductoria sobre George Cantor, fundador de la teoría de conjuntos.">
-    <meta name="keywords" content="George Cantor, teoría de conjuntos, matemáticas, infinito">
-    <meta name="author" content="Tu Nombre">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Hoja de estilos -->
-    <link rel="stylesheet" href="styles.css">
+<title>Grid Matemático</title>
 
-    <title>George Cantor - Página Introductoria</title>
+<style>
+
+/* Hace que padding y border no rompan el ancho matemático */
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+/* Contenedor principal */
+.container{
+display:flex;            
+width:900px;
+margin:40px auto;
+border:3px solid black;
+}
+
+/* Columnas */
+.column{
+flex:1;                  
+padding:20px;
+border:2px solid gray;
+margin:5px;
+position:relative;        
+background:#f4f4f4;
+}
+
+/* Tarjeta interna */
+.card{
+padding:20px;
+border:2px solid black;
+background:white;
+}
+
+/* Elemento superpuesto */
+.badge{
+position:absolute;
+top:-10px;
+right:-10px;
+background:red;
+color:white;
+padding:5px 10px;
+border-radius:5px;
+font-size:12px;
+}
+
+</style>
 </head>
 
 <body>
 
-<header id="encabezado">
-    <h1>George Cantor</h1>
-    <p class="subtitulo">Fundador de la teoría de conjuntos moderna</p>
-</header>
+<div class="container">
 
-<nav class="menu">
-    <ul>
-        <li><a href="#biografia">Biografía</a></li>
-        <li><a href="#aportaciones">Aportaciones</a></li>
-        <li><a href="#infinito">El concepto de infinito</a></li>
-    </ul>
-</nav>
+<div class="column">
+<div class="badge">Nuevo</div>
+<div class="card">
+<h3>Columna 1</h3>
+<p>Contenido de ejemplo.</p>
+</div>
+</div>
 
-<main>
+<div class="column">
+<div class="badge">Info</div>
+<div class="card">
+<h3>Columna 2</h3>
+<p>Contenido de ejemplo.</p>
+</div>
+</div>
 
-<section id="biografia">
-    <h2>Biografía</h2>
+<div class="column">
+<div class="badge">Extra</div>
+<div class="card">
+<h3>Columna 3</h3>
+<p>Contenido de ejemplo.</p>
+</div>
+</div>
 
-    <article class="tarjeta">
-        <h3>Primeros años</h3>
-        <p>
-            George Cantor fue un matemático que revolucionó el pensamiento acerca del infinito.
-            Sus ideas dieron forma a la teoría de conjuntos moderna.
-        </p>
-    </article>
+</div>
 
-    <article class="tarjeta">
-        <h3>Vida académica</h3>
-        <p>
-            Trabajó como profesor y desarrolló resultados que en su momento fueron
-            controversiales, pero hoy son fundamentales para las matemáticas.
-        </p>
-    </article>
-
-</section>
-
-<section id="aportaciones">
-    <h2>Aportaciones principales</h2>
-
-    <article class="tarjeta">
-        <h3>Teoría de conjuntos</h3>
-        <p>
-            Cantor estableció las bases de la teoría de conjuntos.
-        </p>
-    </article>
-
-    <article class="tarjeta">
-        <h3>Números transfinitos</h3>
-        <p>
-            Introdujo los números transfinitos para comparar distintos tamaños de infinito.
-        </p>
-    </article>
-
-</section>
-
-<section id="infinito">
-    <h2>El concepto de infinito</h2>
-
-    <article class="tarjeta">
-        <p>
-            Cantor demostró que existen diferentes tipos de infinito dentro de las matemáticas.
-        </p>
-    </article>
-
-</section>
-
-</main>
-
-<footer id="pie">
-<p>© 2026 Página educativa sobre George Cantor</p>
-</footer>
+</body>
+</html>
 
 </body>
 </html>
