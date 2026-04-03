@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Matrices 2x2</title>
+  <style>
+    input {
+      width: 50px;
+      margin: 2px;
+      text-align: center;
+    }
+    .matriz {
+      display: inline-block;
+      margin: 10px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Calculadora de Matrices 2x2</h2>
+
+<!-- Matriz A -->
+<div class="matriz">
+  <h3>Matriz A</h3>
+  <input id="a11"> <input id="a12"><br>
+  <input id="a21"> <input id="a22">
+</div>
+
+<!-- Matriz B -->
+<div class="matriz">
+  <h3>Matriz B</h3>
+  <input id="b11"> <input id="b12"><br>
+  <input id="b21"> <input id="b22">
+</div>
+
+<br>
+
+<!-- Botones -->
+<button onclick="sumar()">Sumar</button>
+<button onclick="multiplicar()">Multiplicar</button>
+
+<!-- Resultado -->
+<div id="resultado"></div>
+
+<script>
+function obtenerValores() {
+  return {
+    a11: parseFloat(document.getElementById("a11").value) || 0,
+    a12: parseFloat(document.getElementById("a12").value) || 0,
+    a21: parseFloat(document.getElementById("a21").value) || 0,
+    a22: parseFloat(document.getElementById("a22").value) || 0,
+
+    b11: parseFloat(document.getElementById("b11").value) || 0,
+    b12: parseFloat(document.getElementById("b12").value) || 0,
+    b21: parseFloat(document.getElementById("b21").value) || 0,
+    b22: parseFloat(document.getElementById("b22").value) || 0
+  };
+}
+
+// Suma de matrices
+function sumar() {
+  let v = obtenerValores();
+
+  let r11 = v.a11 + v.b11;
+  let r12 = v.a12 + v.b12;
+  let r21 = v.a21 + v.b21;
+  let r22 = v.a22 + v.b22;
+
+  mostrarResultado(r11, r12, r21, r22);
+}
+
+// Multiplicación de matrices
+function multiplicar() {
+  let v = obtenerValores();
+
+  let r11 = v.a11 * v.b11 + v.a12 * v.b21;
+  let r12 = v.a11 * v.b12 + v.a12 * v.b22;
+  let r21 = v.a21 * v.b11 + v.a22 * v.b21;
+  let r22 = v.a21 * v.b12 + v.a22 * v.b22;
+
+  mostrarResultado(r11, r12, r21, r22);
+}
+
+// Mostrar resultado en el DOM
+function mostrarResultado(r11, r12, r21, r22) {
+  let div = document.getElementById("resultado");
+
+  div.innerHTML = `
+    Resultado:<br>
+    [ ${r11}  ${r12} ]<br>
+    [ ${r21}  ${r22} ]
+  `;
+
+  console.log("Resultado:", r11, r12, r21, r22); // depuración
+}
+</script>
+
+</body>
+</html>
