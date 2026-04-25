@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Práctica 10 - Formulario</title>
+<style>
+body{
+font-family:Arial;
+padding:40px;
+background:#f4f4f4;
+}
+form{
+background:white;
+padding:20px;
+max-width:400px;
+border-radius:10px;
+}
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+button{
+padding:10px;
+width:100%;
+background:black;
+color:white;
+border:none;
+}
+</style>
+</head>
+<body>
+
+<h1>Calculadora de Promedio</h1>
+
+<form action="procesar.php" method="POST">
+
+<label>Nombre:</label>
+<input type="text" name="nombre" required>
+
+<label>Calificación 1:</label>
+<input type="number" name="n1" required>
+
+<label>Calificación 2:</label>
+<input type="number" name="n2" required>
+
+<label>Calificación 3:</label>
+<input type="number" name="n3" required>
+
+<button type="submit">Procesar</button>
+
+</form>
+
+</body>
+</html>
